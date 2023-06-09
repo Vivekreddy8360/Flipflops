@@ -60,11 +60,65 @@ Reg No: 212221240030
   assign qbar=~q;
   endmodule
 ```
+## D FLIP-FLOP
+```
+   module exp5b(d,clk,q,qbar);
+   input d,clk;
+   output reg q;
+   output qbar;
+   always@(posedge clk)
+   begin
+   q=((~q)&d)|(q&d);
+   end
+   assign qbar=~q;
+   endmodule
+```
+## JK FLIP-FLOP
+```
+   module exp5c(j,k,clk,q,qbar);
+   input j,k,clk;
+   output reg q;
+   output qbar;
+   always@(posedge clk)
+   begin
+   q=((~q)&j)|(q&(~k));
+   end
+   assign qbar=~q;
+   endmodule
+```
+## T FLIP-FLOP
+```
+   module exp5d(t,clk,q,qbar);
+   input t,clk;
+   output reg q;
+   output qbar;
+   always@(posedge clk)
+   begin
+   q=((~q)&t)|(q&(~t));
+   end
+   assign qbar=~q;
+   endmodule
+```
 ## RTL Schematic:
+## SR FLIP-FLOP
 ![image](https://github.com/Vivekreddy8360/Flipflops/assets/94525701/1ec93891-7111-40b6-b496-fbcdcd07453c)
+## D FLIP-FLOP
+![image](https://github.com/Vivekreddy8360/Flipflops/assets/94525701/5099bd9d-bc1b-4cbb-aab1-205bd3342c1a)
+## JK FLIP-FLOP
+![image](https://github.com/Vivekreddy8360/Flipflops/assets/94525701/21325f76-4e35-48c6-b033-32a4b160c8b0)
+## T FLIP-FLOP
+![image](https://github.com/Vivekreddy8360/Flipflops/assets/94525701/c5c8e11d-27dc-457e-932c-cad77919dc41)
+
 ## Timing Diagram:
 ## SR FLIP-FLOP
 ![image](https://github.com/Vivekreddy8360/Flipflops/assets/94525701/218aa7f4-b90e-4e7e-802e-c33b0fa7b6b7)
+## D Flip-FLOP
+![image](https://github.com/Vivekreddy8360/Flipflops/assets/94525701/c55d54ff-54e3-4d17-95f1-8aa755ea71b3)
+## JK FLIP-FLOP
+![image](https://github.com/Vivekreddy8360/Flipflops/assets/94525701/83f4f483-b07c-4cdf-befa-4edd76cea4e4)
+## T FLIP-FLOP
+![image](https://github.com/Vivekreddy8360/Flipflops/assets/94525701/630afb5f-3130-4c3e-9118-4190bb3fe67a)
+
 ## Result:
 Thus the SR, D, JK and T flipflops are implemented and the characteristic tables are verified.
 
