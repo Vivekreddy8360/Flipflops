@@ -43,17 +43,28 @@ In T flip flop, "T" defines the term "Toggle". In SR Flip Flop, we provide only 
 
 
 ## Program:
-
-
+~~~
+Developed by: M.vivek reddy
+Reg No: 212221240030
+~~~
+## SR FLIP-FLOP
+```
+  module exp5a(s,r,clk,q,qbar);
+  input s,r,clk;
+  output reg q;
+  output qbar;
+  always@(posedge clk)
+  begin
+  q=s|((~r)&q);
+  end
+  assign qbar=~q;
+  endmodule
+```
 ## RTL Schematic:
-
-
-
-
+![image](https://github.com/Vivekreddy8360/Flipflops/assets/94525701/1ec93891-7111-40b6-b496-fbcdcd07453c)
 ## Timing Diagram:
-
-
-
+## SR FLIP-FLOP
+![image](https://github.com/Vivekreddy8360/Flipflops/assets/94525701/218aa7f4-b90e-4e7e-802e-c33b0fa7b6b7)
 ## Result:
 Thus the SR, D, JK and T flipflops are implemented and the characteristic tables are verified.
 
